@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pilot Calc</title>
+</head>
+
+<body>
+
+<h1>✈️ Pilot Calc</h1>
+
+<input id="weight" type="number" placeholder="Weight (kg)">
+<input id="arm" type="number" placeholder="Arm (m)">
+
+<button onclick="calculate()">Hesapla</button>
+
+<h2 id="result">Moment: -</h2>
+
+<script>
+function calculate() {
+    let weight = Number(document.getElementById("weight").value);
+    let arm = Number(document.getElementById("arm").value);
+
+    let moment = weight * arm;
+
+    document.getElementById("result").innerText =
+        "Moment: " + moment.toFixed(2) + " kg·m";
+}
+</script>
+
+</body>
+</html>
